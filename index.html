@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Wedding Memories</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f7f3ef;
+        color: #202020;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: grid;
+        min-height: 100vh;
+        margin: 0;
+        place-items: center;
+        background:
+          linear-gradient(120deg, rgba(54, 91, 109, 0.14), transparent 38%),
+          linear-gradient(300deg, rgba(136, 67, 67, 0.14), transparent 42%),
+          #f7f3ef;
+      }
+
+      main {
+        width: min(560px, calc(100% - 32px));
+        padding: 28px;
+        border: 1px solid rgba(32, 32, 32, 0.12);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 20px 55px rgba(38, 35, 31, 0.08);
+      }
+
+      p {
+        margin: 0 0 16px;
+        color: #555;
+        line-height: 1.5;
+      }
+
+      h1 {
+        margin: 0 0 14px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 2.6rem;
+        line-height: 1;
+      }
+
+      a {
+        display: inline-block;
+        min-height: 48px;
+        border-radius: 7px;
+        padding: 13px 18px;
+        background: #2f5f68;
+        color: #fff;
+        font-weight: 800;
+        text-decoration: none;
+      }
+    </style>
+    <script>
+      const uploadUrl = "https://sleep-encounter-generations-bloggers.trycloudflare.com/?code=quLvBZmoOq6-";
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const link = document.querySelector("#uploadLink");
+        link.href = uploadUrl;
+
+        if (uploadUrl.startsWith("https://CHANGE-THIS")) {
+          document.querySelector("#status").textContent =
+            "The upload link is not ready yet. Please try again later.";
+          return;
+        }
+
+        window.location.replace(uploadUrl);
+      });
+    </script>
+  </head>
+  <body>
+    <main>
+      <h1>Wedding Memories</h1>
+      <p id="status">Opening the photo upload page...</p>
+      <a id="uploadLink" href="#">Open Upload Page</a>
+    </main>
+  </body>
+</html>
